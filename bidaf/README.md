@@ -120,7 +120,7 @@ python -m basic.cli --mode test --batch_size 8 --eval_num_batches 0 --load_step 
 python -m basic.cli --mode train --len_opt --cluster \
 --num_gpus 2 --batch_size 30 \
 --input_keep_prob 0.9 \
---load_path out/${TIMESTAMP}/basic/00/save \ # fine-tune baseline, use [--noload] if train from scratch
+--load_path out/${TIMESTAMP}/basic/00/save/[model] \ # fine-tune baseline, use [--noload] if train from scratch
 --structure_wd 0.001 \ # the hyperparameter to make trade-off between sparsity and EM/F1 performance
 --group_config groups_hidden100.json # the json to specify ISS structures for LSTMs
 ```
